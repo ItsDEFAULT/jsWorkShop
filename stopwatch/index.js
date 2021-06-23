@@ -19,13 +19,13 @@ function stopWatch() {
 
 function startStop() {
 	if (!status) {
-		interval = setInterval(stopWatch, 1);
+		interval = setInterval(stopWatch, 1000);
 		document.getElementById("startStop").innerHTML = "Stop";
-		status = "started";
+		status = true;
 	} else {
 		clearInterval(interval);
 		document.getElementById("startStop").innerHTML = "Start";
-		status = "stopped";
+		status = false;
 	}
 }
 
